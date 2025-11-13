@@ -22,6 +22,7 @@
   grid-template-rows: 1fr min-content 1fr;
   justify-content: center;
   padding: 10px;
+  box-sizing: border-box;
 }
 
 .decorated-zone {
@@ -100,12 +101,20 @@
   width: 70px;
   height: 26px;
   text-align: center;
+  cursor: pointer;
 }
 
 .header__theme-menu-button_type_light:hover,
 .header__theme-menu-button_type_auto:hover,
 .header__theme-menu-button_type_dark:hover {
   outline: 1px solid var(--btn-hover-color);
+}
+
+.header__theme-menu-button_type_light:focus,
+.header__theme-menu-button_type_auto:focus,
+.header__theme-menu-button_type_dark:focus {
+  outline: none;
+  text-decoration: underline;
 }
 
 .header__theme-menu-button_type_light:focus-visible,
@@ -193,6 +202,7 @@
   text-decoration: none;
   line-height: 100%;
   text-shadow: 1px 1px var(--shadow-color);
+  cursor: pointer;
 }
 
 .link:hover {
@@ -231,6 +241,7 @@
   display: grid;
   justify-content: center;
   padding: 10px;
+  box-sizing: border-box;
 }
 
 .footer__title {
@@ -272,8 +283,16 @@
     right: 50px;
   }
 
+  .header__title {
+    margin-left: -20px;
+  }
+
+  .header__paragraph {
+    
+  }
+
   .header__text {
-    inline-size: 364px; /*!*/
+    inline-size: 364px;
     justify-self: end;
   }
 
@@ -375,6 +394,7 @@
   /*ПОДВАЛ*/
 
   .footer {
+    min-height: 1024px;
     padding: 20px;
   }
 }
@@ -404,7 +424,7 @@
   }
 
   .header__text {
-    inline-size: 491px; /*!*/
+    inline-size: 491px;
   }
 
   /*ОСНОВНОЙ КОНТЕНТ*/
@@ -458,6 +478,10 @@
   }
 
   /*ПОДВАЛ*/
+
+  .footer {
+    min-height: 768px;
+  }
 
   .footer__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem); /*157px*/
