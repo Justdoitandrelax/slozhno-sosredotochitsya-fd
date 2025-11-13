@@ -29,10 +29,3 @@
       display: none;
     }
 }
-
-@media (prefers-color-scheme: light) {
-    .header__decor,
-    .header__decor::after {
-      display: none;
-    }
-}
