@@ -8,7 +8,6 @@
   background-color: var(--bg-color);
   display: grid;
   justify-content: center;
-  gap: 40px;
   font-family: var(--font-main);
 }
 
@@ -151,7 +150,7 @@
   flex-direction: column;
   justify-content: center;
   gap: 50px;
-  margin: 0 10px;
+  margin: 40px 10px;
 }
 
 /*все секции*/
@@ -257,9 +256,6 @@
 /*------------------------- 768 - 1024 -------------------------*/
 
 @media (width >= 768px) {
-  .page {
-    gap: 60px;
-  }
 
   /*ПЕРВЫЙ БЛОК*/
 
@@ -296,7 +292,7 @@
 
   .main {
     gap: 80px;
-    margin: 0 20px;
+    margin: 60px 20px;
   }
 
   /*все секции*/
