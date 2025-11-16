@@ -18,5 +18,5 @@
   --title-small-color: #353430;
   --text-color: #353430;
   --accent-color: #FF8DCB;
-  --font-main: 'IBM Plex mono', sans-serif;
+  --font-main: 'IBM Plex mono', monospace;
 }

@@ -104,22 +104,15 @@
   cursor: pointer;
 }
 
-.header__theme-menu-button_type_light:hover,
-.header__theme-menu-button_type_auto:hover,
-.header__theme-menu-button_type_dark:hover {
+.header__theme-menu-button:hover {
   outline: 1px solid var(--btn-hover-color);
 }
 
-.header__theme-menu-button_type_light:focus,
-.header__theme-menu-button_type_auto:focus,
-.header__theme-menu-button_type_dark:focus {
+.header__theme-menu-button:focus {
   outline: none;
-  text-decoration: underline;
 }
 
-.header__theme-menu-button_type_light:focus-visible,
-.header__theme-menu-button_type_auto:focus-visible,
-.header__theme-menu-button_type_dark:focus-visible {
+.header__theme-menu-button:focus-visible {
   outline: none;
   text-decoration: underline;
 }
@@ -141,7 +134,6 @@
 
 .header__paragraph {
   align-self: center;
-  min-height: 117px;
 }
 
 .header__text {
@@ -177,6 +169,12 @@
   color: var(--title-section-color);
 }
 
+.section__block-reasons,
+.section__block-advices {
+  display: grid;
+  gap: 20px;
+}
+
 .section__article {
   display: flex;
   flex-direction: column;
@@ -206,12 +204,11 @@
 }
 
 .link:hover {
-  text-decoration: underline;
+  border-bottom: 2px solid var(--btn-line-color);
 }
 
 .link:focus {
-  outline: 1px solid var(--btn-line-color);
-  text-decoration: none;
+  outline: none;
 }
 
 .link:focus-visible {
@@ -229,6 +226,10 @@
 }
 
 /*секция 4*/
+.section__pictures {
+  gap: 10px;
+}
+
 .image {
   width: 100%;
 }
@@ -263,7 +264,6 @@
   /*ПЕРВЫЙ БЛОК*/
 
   .header {
-    height: 100%;
     min-height: 1024px;
     padding: 20px;
   }
@@ -295,8 +295,6 @@
   /*ОСНОВНОЙ КОНТЕНТ*/
 
   .main {
-    display: flex;
-    flex-direction: column;
     gap: 80px;
     margin: 0 20px;
   }
@@ -304,9 +302,7 @@
   /*все секции*/
   /*секция 1*/
   .section__main {
-    display: grid;
     grid-template-columns: 1fr 2fr;
-    grid-template-rows: 1fr 1fr;
   }
 
   .section__article-main {
@@ -315,40 +311,28 @@
 
   /*секция 2*/
   .section__reasons {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 
-  .section__title-reasons {
-    grid-column: 1;
-    grid-row: 1;
+  .section__block-reasons {
+    grid-column: span 3;
   }
-
-  .section__article-reasons {
-    grid-column: 1 / 5;
-  }
-
+  
   /*секция 3*/
   .section__advices {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: min-content repeat(5, auto-fill);
+    grid-template-columns: repeat(3, 1fr);
   }
 
-  .section__title-advices {
-    grid-column: 1;
-    height: 1.4375rem;
-  }
-
-  .section__subtitle-advices {
-    grid-column: 2;
-  }
-
-  .section__article-advices {
-    grid-column: 2;
+  .section__block-advices {
+    grid-column: span 2;
   }
 
   /*секция 4*/
+
+  .section__pictures {
+    gap: 20px;
+  }
+  
   .image {
     object-fit: cover;
     height: 100%;
@@ -356,7 +340,7 @@
 
   .section__images {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     width: 100%;
     justify-content: center;
@@ -402,7 +386,6 @@
   /*ПЕРВЫЙ БЛОК*/
 
   .header {
-    height: 100%;
     min-height: 768px;
   }
 
@@ -425,52 +408,10 @@
 
   /*ОСНОВНОЙ КОНТЕНТ*/
 
-  /*все секции*/
   /*секция 2*/
-  .section__reasons {
+  .section__block-article {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-  }
-
-  .section__article-reasons_caces {
-    grid-column: 1;
-    grid-row: 2;
-  }
-
-  .section__article-reasons_food {
-    grid-column: 2;
-    grid-row: 2;
-  }
-
-  .section__article-reasons_gadgets {
-    grid-column: 3;
-    grid-row: 2;
-  }
-
-  /*секция 4*/
-  .image:nth-child(1) {
-    grid-column: 1 / span 2;
-    grid-row: 1;
-  }
-
-  .image:nth-child(2) {
-    grid-column: 3;
-    grid-row: 1 / span 2;
-  }
-
-  .image:nth-child(3) {
-    grid-column: 1;
-    grid-row: 2 / 5;
-  }
-
-  .image:nth-child(4) {
-    grid-column: 2;
-    grid-row: 2;
-  }
-
-  .image:nth-child(5) {
-    grid-column: 2 / span 2;
-    grid-row: 3 / span 2;
   }
 
   /*ПОДВАЛ*/
