@@ -305,7 +305,6 @@
     margin: 60px 20px;
   }
 
-  /*все секции*/
   /*секция 1*/
   .section__main {
     grid-template-columns: 1fr 2fr;
